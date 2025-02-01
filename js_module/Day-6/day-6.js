@@ -1,19 +1,19 @@
 // Table Print
-var a = parseInt(prompt("Pls Enter the number for which you want Table: "));
-var n = 1;
+// var a = parseInt(prompt("Pls Enter the number for which you want Table: "));
+// var n = 1;
 
-const rootContainer = document.getElementById("root");
+// const rootContainer = document.getElementById("root");
 
-while (n <= 10) {
-  console.log(`${a}X${n}=`, 2 * n);
+// while (n <= 10) {
+//   console.log(`${a}X${n}=`, 2 * n);
 
-  const tableEntry = document.createElement("h2");
+//   const tableEntry = document.createElement("h2");
 
-  tableEntry.textContent = `${a} x ${n} = ${a * n}`;
+//   tableEntry.textContent = `${a} x ${n} = ${a * n}`;
 
-  rootContainer.appendChild(tableEntry);
-  n++;
-}
+//   rootContainer.appendChild(tableEntry);
+//   n++;
+// }
 
 // Print Even Number
 
@@ -48,3 +48,31 @@ while (n <= 10) {
 //     console.log("You have defeated the game!!!!!!!");
 //   }
 // }
+
+
+
+let password = prompt("Enter Your Password: ");
+
+const hasMinimumLength = password.length >= 8;
+const hasUpperCaseLatter = /[A-Z]/.test(password);
+const hasNumber = /[0-9]/.test(password);
+
+if(!hasMinimumLength) {
+    console.log("Your Password must have atlest 8 Char......");
+    alert("Your Password must have atlest 8 Char......");
+}
+else if(!hasUpperCaseLatter) {
+    console.log("Your Password must have Upper Case Later......");
+    alert("Your Password must have Upper Case Later......");
+}
+else if(!hasNumber) {
+    console.log("Your Password must have Number......");
+    alert("Your Password must have Number......");
+}
+else {
+    console.log("Congratulations!, Your Password is Correct...");
+    alert("Congratulations!, Your Password is Correct...");
+}
+
+
+
