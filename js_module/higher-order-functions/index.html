@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Higher Order Function</title>
+  </head>
+  <body>
+    <script>
+
+        let arr = [1, 2, 3, 4];
+
+        let squaredArr = arr.map((num)=>{
+            console.log("Text ", num);
+            return num*num;
+        });
+        // [1, 4, 9, 16]
+
+        console.log("SquaredArr", squaredArr);
+
+        let filteredArr = arr.filter((num)=>{
+            return num % 2 === 0;
+        });
+
+        console.log("filteredArr", filteredArr);
+
+        // [2, 4]
+
+
+        let calsius = [0, 4, 76, 54];
+        // let fahrenheit = [Modified Array]; 
+
+
+    //     function sum(p, q) {
+    //         return p+q;
+    //     }
+
+    //     function product(p, q) {
+    //         return p*q;
+    //     }
+
+
+    //   function HOFDemo(fun1, fun2, a, b) {
+    //     console.log("First function is ", fun1);
+    //     console.log("Second function is ", fun2);
+    //     console.log("First number is ", a);
+    //     console.log("Second number is ", b);
+
+    //     return fun1(a, b) + fun2(a, b);
+    //   }
+
+    //   console.log(HOFDemo(sum, product, 10, 12));
+    </script>
+  </body>
+</html>
+
+<!-- Higher Order Function ? 
+ 
+- A function that returns a function or take a fuction as an argument is called Higher Order Function (HOF).
+
+sum - function
+product - function
+
+
+func HOFDemo(fun1, fun1, a, b) {
+return sum(a, b) + product(a, b);
+};
+
+HOFDemo(sum, product, 10, 12)
+
+What is CallBack Function ?
+
+- A function that takes any function as an argument, is called callback function.
+
+eg: func(()=>{});
+
+What is Map ?
+
+- A callback function that traverse on array make some operation on each element of array and return a modified array is called map function. 
+
+map(()=>{});
+-->
