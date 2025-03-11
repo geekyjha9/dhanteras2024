@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    
+    <div class="container">
+        <h2>ToDo List (Task Management)</h2>
+        <input type="text" placeholder="Enter a Task" id="taskInput">
+        <button id="addTaskBtn">Add Task</button>
+        <ul id="taskList"></ul>
+
+        
+    </div>
+
+    <script src="./scriptWithLocalStorage.js"></script>
+</body>
+</html>
+
+
+<!-- 
+ToDo 
+
+Task List (track of completed tasks, delete)
+
+-->
+
+<!-- App Flow :
+
+1. Input for task name
+2. on click of submit button ... task must be added
+3. tasks should be shown
+ 
+-->
+
+<!-- Toggle :
+
+1. check, whether the specific class is present or not .... 
+2. is any class is available then toggle will remove that class or if the class is absent then toggle will add that class.
+ 
+-->
+
+
+<!-- Local Storage : 
+=> To Add data in local storge:
+localStorage.setItem("Key", "Value");
+
+=> To get data in local storge:
+const tasks = localStorage.getItem("Key");
+
+=> To remove data by id in local storge:
+localStorage.removeItem("Key");
+
+=> To clear all data from local storge:
+localStorage.clear();
+-->
+
+
+<!-- Flow of using Local Storage : 
+
+1. on click of button, task need to be added in UI and saved in Local Storage ...
+2. when you refresh or land on your webpage, get all tasks from local storage and show in UI....
+-->
