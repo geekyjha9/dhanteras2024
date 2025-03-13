@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #007BFF, #00C6FF);
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        .container {
+            max-width: 400px;
+            margin: auto;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        input {
+            width: 80%;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        button {
+            padding: 10px 15px;
+            border: none;
+            background: #FFD700;
+            color: black;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #FFC107;
+        }
+
+        .weather-info {
+            margin-top: 20px;
+        }
+
+        .error {
+            color: red;
+            font-weight: bold;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>🌤️ Weather App</h1>
+    <div class="container">
+        <input type="text" id="cityInput" placeholder="Enter City Name" />
+        <button onclick="getWeather()">Get Weather</button>
+
+        <div class="weather-info" id="weatherInfo"></div>
+        <p class="error" id="errorMessage"></p>
+    </div>
+
+    <script>
+        function getWeather() {
+            let city = document.getElementById("cityInput").value.trim();
+            let apiKey = "fd6d50b6b81101b98c2ce5de34fec84f";
+            let url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+
+            fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                if (data.cod === 200) {
+                    document.getElementById("weatherInfo").innerHTML = `
+                        <h2>${data.name}, ${data.sys.country}</h2>
+                        <p><strong>Temperature:</strong> ${data.main.temp}°C</p>
+                        <p><strong>Weather:</strong> ${data.weather[0].main} (${data.weather[0].description})</p>
+                        <p><strong>Humidity:</strong> ${data.main.humidity}%</p>
+                        <p><strong>Wind Speed:</strong> ${data.wind.speed} m/s</p>
+                    `;
+                    document.getElementById("errorMessage").innerText = "";
+                } else {
+                    document.getElementById("errorMessage").innerText = "City not found! Please enter a valid city.";
+                    document.getElementById("weatherInfo").innerHTML = "";
+                }
+            })
+            .catch(error => {
+                document.getElementById("errorMessage").innerText = "Error fetching data!";
+                console.error("Error:", error);
+            });
+        }
+    </script>
+
+</body>
+</html>
