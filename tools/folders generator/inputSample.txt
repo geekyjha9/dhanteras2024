@@ -1,0 +1,1 @@
+input = creating a react project for making clone of swiggy

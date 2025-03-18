@@ -1,0 +1,29 @@
+Generate a folder structure for {Input} as a JavaScript object that follows this format:
+
+Folders are represented as objects.
+Files inside a folder should be in a _files array.
+Empty folders should be empty objects {}.
+The structure should be suitable for a React project.
+Include common folders like public/, src/, components/, pages/, and assets/.
+
+Example format:
+```js
+const folderStructure = {
+  public: {
+    _files: ["index.html", "manifest.json"],
+    assets: {}
+  },
+  src: {
+    components: {
+      Button: {
+        _files: ["Button.jsx", "Button.module.css"]
+      }
+    },
+    assets: {
+      styles: {
+        _files: ["global.css"]
+      }
+    }
+  }
+};
+```
