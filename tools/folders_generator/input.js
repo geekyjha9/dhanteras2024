@@ -11,7 +11,7 @@ const folderStructure = {
         fonts: {},
         icons: {},
         styles: {
-          _files: ["base.scss", "variables.scss", "mixins.scss", "global.css"]
+          _files: ["base.scss", "variables.scss", "mixins.scss", "global.css", "meckup.css"]
         }
       },
       components: {
