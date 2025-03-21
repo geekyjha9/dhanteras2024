@@ -3,7 +3,7 @@ const path = require("path");
 const folderStructure = require('./input');
 
 // ✅ Define the output directory
-const OUTPUT_DIR = path.join(process.cwd(), "test2");
+const OUTPUT_DIR = path.join(process.cwd(), "movie-finder-app");
 
 // ✅ Function to create folders and files properly
 const createStructure = (basePath, structure) => {

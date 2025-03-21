@@ -1,8 +1,51 @@
+// What is Promise ?
+
+// Asynchronous Tasks : Fetch, File Read, Server se Photo Fetch
+
+
+// Stages of Promisses : Panding, Fulfilled Stage, Rejected 
 
 
 
-console.log("the value of a is.... ", a);
-console.log("The demo function is ", window.demo);
+const promissesExampe = new Promise((resolve, reject) => {
+
+    let dataFetch = true; // Mana ki yha ek condition hai 
+
+    if(dataFetch) {
+        resolve("Data Fetched Successfully ..... ");
+    }
+    else {
+        reject("failed to fetch data");
+    }
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// console.log("the value of a is.... ", a);
+// console.log("The demo function is ", window.demo);
 
 
 
@@ -10,27 +53,27 @@ console.log("The demo function is ", window.demo);
 // what is hiosting ?
 
 
-var a;
-var b;
-var c;
-var d;
+const a = 5; // Declare
+// var b;
+// var c;
+// var d;
 
 
 
 
-console.log("the value of a after declaration is.... ", a);
+// console.log("the value of a after declaration is.... ", a);
 
 
-a = 10;
+// a = 10; // Vallue Assign
 
 console.log("the value of a after assigning value is.... ", a);
 
-function demo() {
-    var x = 10;
-    var y = 20;
-    console.log(x+y);
+// function demo() {
+//     var x = 10;
+//     var y = 20;
+//     console.log(x+y);
     
-}
+// }
 
 
 
@@ -57,3 +100,27 @@ function demo() {
 
 // How Apis Fetching (Asynchronous Function) Behaves BTS ?
 
+
+
+
+
+
+
+// var Y = 15;
+
+// A() {
+//     B () {
+//         C () {
+//             var/let/const X = 10;
+//             dgashjga
+
+//             console.log("Fgfdsgdfs", X)
+//         }
+
+//         console.log("Fgfdsgdfs", X)
+//     }
+
+//     console.log("Fgfdsgdfs", X)
+// }
+
+// console.log("Fgfdsgdfs", X)
